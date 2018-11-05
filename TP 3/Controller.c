@@ -86,7 +86,21 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int estado = -1;
+    if(employee_deleteEmployee(pArrayListEmployee)== 0)
+    {
+        printf("    *--------------------------------------*     \n");
+        printf(" SE BORRO CORRECTAMENTE EL EMPLEADO SELECCIONADO  \n");
+        printf("    *--------------------------------------*     \n");
+        estado = 0;
+    }
+    else
+    {
+        printf("    *--------------------------------------*     \n");
+        printf("  HUBO UN ERROR Y NO SE PUDO BORRAR EL EMPLEADO \n");
+        printf("    *--------------------------------------*     \n");
+    }
+    return estado;
 }
 
 /** \brief Listar empleados
@@ -98,6 +112,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
+    employee_mostrar(pArrayListEmployee);
     return 1;
 }
 
@@ -110,7 +125,21 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int estado =-1;
+    if(pArrayListEmployee != NULL)
+    {
+        ll_sort(pArrayListEmployee , employee_criterioNombre , 1);
+        printf("    *--------------------------------------*     \n");
+        printf("        SE ORDENO CORRECTAMENTE LA LISTA        \n");
+        printf("    *--------------------------------------*     \n");
+    }
+    else
+    {
+        printf("    *--------------------------------------*     \n");
+        printf("    HUBO UN ERROR Y NO SE PUDO ORDENAR LA LISTA  \n");
+        printf("    *--------------------------------------*     \n");
+    }
+    return -1;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo texto).
@@ -122,7 +151,20 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int estado = -1;
+    if(employee_saveDataInText(pArrayListEmployee , path)==0)
+    {
+        printf("         *--------------------------------------*            \n");
+        printf("    SE GUARDARON CORRECTAMENTE LOS DATOS EN EL ARCHIVO TXT \n");
+        printf("         *--------------------------------------*            \n");
+    }
+    else
+    {
+        printf("        *--------------------------------------*     \n");
+        printf("     HUBO UN ERROR Y NO SE PUDO GUARDAD LOS DATOS   \n");
+        printf("        *--------------------------------------*     \n");
+    }
+    return -1;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
@@ -134,6 +176,22 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int estado = -1;
+    if(employee_saveDataInBinary(pArrayListEmployee, path) == 0)
+    {
+        printf("         *--------------------------------------*            \n");
+        printf("    SE GUARDARON CORRECTAMENTE LOS DATOS EN EL ARCHIVO BIN \n");
+        printf("         *--------------------------------------*            \n");
+        estado = 0;
+    }
+    else
+    {
+        printf("        *--------------------------------------*     \n");
+        printf("     HUBO UN ERROR Y NO SE PUDO GUARDAD LOS DATOS   \n");
+        printf("        *--------------------------------------*     \n");
+    }
+    return estado;
 }
+
+
 

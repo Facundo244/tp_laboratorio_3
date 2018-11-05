@@ -24,4 +24,15 @@ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
 int employee_setSueldo(Employee* this,int sueldo);
 int employee_getSueldo(Employee* this,int* sueldo);
 
+int employee_saveDataInBinary(LinkedList* pArrayEmployee , char* path);
+int employee_saveDataInText(LinkedList* pArrayEmployee , char* path);
+
+int employee_criterioNombre(void* thisA,void* thisB);
+int employee_deleteEmployee(LinkedList* pArrayEmployee);
+
+int employee_buscarPorId(LinkedList* pArrayEmployee, int idEmployee);
+void employee_mostrar(LinkedList* pArrayListEmployee);
+
+int employee_buscarPorId(LinkedList* pArrayEmployee, int idEmployee);
+
 #endif // employee_H_INCLUDED

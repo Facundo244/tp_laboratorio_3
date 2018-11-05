@@ -4,7 +4,7 @@
 #include "Employee.h"
 #include <string.h>
 
-
+//el modificar y el cargar employee
 
 Employee* employee_new(void)
 {
@@ -157,8 +157,8 @@ void employee_mostrar(LinkedList* pArrayListEmployee)
     int i;
     int auxId;
     char auxName[1024];
-    int auxHorasTrabajadas;
-    int auxSueldo;
+    int auxWorkedHours;
+    int auxSalary;
     int size;
     size = ll_len(pArrayListEmployee);
     Employee* auxEmployee;
@@ -167,10 +167,10 @@ void employee_mostrar(LinkedList* pArrayListEmployee)
         for(i=0; i < size; i++)
         {
             auxEmployee = ll_get(pArrayListEmployee, i);
-            if( employee_getId(auxEmployee, &auxId) == 0 && employee_getNombre(auxEmployee, auxName) == 0 && employee_getSueldo(auxEmployee, &auxSueldo) == 0 &&
-                employee_getHorasTrabajadas(auxEmployee, &auxHorasTrabajadas) == 0)
+            if( employee_getId(auxEmployee, &auxId) == 0 && employee_getNombre(auxEmployee, auxName) == 0 && employee_getSueldo(auxEmployee, &auxSalary) == 0 &&
+                employee_getHorasTrabajadas(auxEmployee, &auxWorkedHours) == 0)
             {
-                printf("ID: %d - Name: %s - Salary: %d - Worked Hours: %d \n", auxId, auxNombre, auxSueldo, auxHorasTrabajadas);
+                printf("ID: %d - Name: %s - Salary: %d - Worked Hours: %d \n", auxId, auxName, auxSalary, auxWorkedHours);
             }
             else
             {
@@ -219,16 +219,17 @@ int employee_deleteEmployee(LinkedList* pArrayEmployee)
     int idEmployee;
     int ID;
     Employee* auxPEmployee;
+
     if(pArrayEmployee != NULL && (&idEmployee , 10 , "Ingrese el ID del empleado que desea eliminar: " , "ID Invalido") == 0)
     {
-        id = employee_buscarPorId(pArrayEmployee , idEmployee);
+        ID = employee_buscarPorId(pArrayEmployee , idEmployee);
         if(ID >= 0)
         {
-            auxPEmployee = ll_get(pArrayEmployee , id);
+            auxPEmployee = ll_get(pArrayEmployee , ID);
             if(employee_delete(auxPEmployee)==0)
             {
                 retorno = 0;
-                ll_remove(pArrayEmployee , id);
+                ll_remove(pArrayEmployee , ID);
             }
         }
         else
@@ -242,7 +243,7 @@ int employee_deleteEmployee(LinkedList* pArrayEmployee)
     return retorno;
 }
 
-/*int employee_criterioNombre(void* thisA,void* thisB)
+int employee_criterioNombre(void* thisA,void* thisB)
 {
     int retorno = 0;
     char nombreA[1024];
@@ -258,29 +259,29 @@ int employee_deleteEmployee(LinkedList* pArrayEmployee)
     }
     return retorno;
 }
-*/
+
 
 int employee_saveDataInText(LinkedList* pArrayEmployee , char* path)
 {
     FILE* pArchivo;
     int estado = -1;
     int i;
-    int tamaño;
-    pArchivo = fopen(path , "w")
-    tamaño = ll_len(pArrayEmployee);
+    int tam;
+    pArchivo = fopen(path , "w");
+    tam = ll_len(pArrayEmployee);
     Employee* auxPEmployee;
 
     if(pArchivo != NULL)
     {
-        retorno = 0;
-        for(i=0 ; i<tamaño ; i++)
+        estado = 0;
+        for(i=0 ; i<tam ; i++)
         {
             auxPEmployee = ll_get(pArrayEmployee, i);
             fprintf(pArchivo , "%d -- %s -- %d -- &d \n" , auxPEmployee->id , auxPEmployee->nombre , auxPEmployee->sueldo , auxPEmployee->horasTrabajadas);
         }
     }
     fclose(pArchivo);
-    return retorno;
+    return estado;
 
 }
 
@@ -290,14 +291,14 @@ int employee_saveDataInBinary(LinkedList* pArrayEmployee , char* path)
     FILE* pArchivo;
     Employee* auxPEmployee;
     int i;
-    int tamaño = ll_len(pArrayEmployee);
+    int tam = ll_len(pArrayEmployee);
     pArchivo = fopen(path , "wb");
 
 
     if(pArchivo != NULL)
     {
         estado = 0;
-        for(i = 0 ; i< tamaño ; i++)
+        for(i = 0 ; i< tam ; i++)
         {
             auxPEmployee = ll_get(pArrayEmployee , i);
             fwrite(auxPEmployee , sizeof(Employee), 1 , pArchivo);
@@ -310,16 +311,3 @@ int employee_saveDataInBinary(LinkedList* pArrayEmployee , char* path)
 
 }
 
-int employee_LoadEmployee(LinkedList* pArrayEmployee)
-{
-    int estado = -1;
-    char auxName[1024];
-    char auxID[1024] = "-1";
-    int auxWorkedHours;
-    int auxSuelda;
-    char bufferWorkedHours[1024];
-    char bufferSalary[1024];
-    Employee* auxPunteroEmployee;
-
-    if(utn_getNombre())
-}
