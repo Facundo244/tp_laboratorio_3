@@ -292,3 +292,50 @@
 	"LinkedList.h"
 	"Employee.h"
 
+1541698436 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\bibliotecafunciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"BibliotecaFunciones.h"
+	<ctype.h>
+
+1541613016 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\bibliotecafunciones.h
+
+1541700867 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"BibliotecaFunciones.h"
+
+1541544158 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\linkedlist.h
+
+1541612908 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\employee.h
+
+1541544158 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\parser.h
+
+1541699538 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"BibliotecaFunciones.h"
+	<string.h>
+
+1541700875 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"BibliotecaFunciones.h"
+
+1541698212 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\controller.h
+
+1541610161 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+

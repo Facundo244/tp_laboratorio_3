@@ -4,15 +4,15 @@
 #include "BibliotecaFunciones.h"
 #include <ctype.h>
 
-static int getString(char* pBufferString,int limite);
-static int getInt(int* pResultado);
-static int getFloat(float* pResultado);
-static int isFloat(char* pBuffer);
-int isLetra(char* pBuffer);
-int isIntConGuiones(char* pBuffer);
-int isInt(char* pBuffer);
+static int obtenerChar(char* pBufferString,int limite);
+static int obtenerEntero(int* pResultado);
+static int obtenfloat(float* pResultado);
+static int esFlotante(char* pBuffer);
+int esLetra(char* pBuffer);
+int EnteroConGuiones(char* pBuffer);
+int esEntero(char* pBuffer);
 
-int library_getNombre(char* pNombre, char* msg, char* msgError)
+int ObtenerName(char* pNombre, char* msg, char* msgError)
 {
     int retorno = -1;
     int max=50;
@@ -20,7 +20,7 @@ int library_getNombre(char* pNombre, char* msg, char* msgError)
     if(pNombre != NULL && msg != NULL && msgError != NULL)
     {
         printf("%s", msg);
-        if(getString(bufferString, max) == 0 && isLetra(bufferString) == 0 && isInt(bufferString) != 0)
+        if(obtenerChar(bufferString, max) == 0 && esLetra(bufferString) == 0 && esEntero(bufferString) != 0)
         {
             retorno = 0;
             strncpy(pNombre, bufferString, max);
@@ -44,14 +44,14 @@ int library_getNombre(char* pNombre, char* msg, char* msgError)
     @return return 0 OK, -1 Error.
 */
 
-int library_getEntero(int* pNum,int reint,char* msg,char* msgError,int maximo,int minimo)
+int BibliotecaObtenerEntero(int* pNum,int reint,char* msg,char* msgError,int maximo,int minimo)
 {
     int auxiliarNum;
     int retorno = -1;
     for(;reint>0;reint--)
     {
         printf(msg);
-        if(getInt(&auxiliarNum) == 0)
+        if(obtenerEntero(&auxiliarNum) == 0)
         {
             if(auxiliarNum > minimo && auxiliarNum < maximo)
             {
@@ -79,14 +79,14 @@ int library_getEntero(int* pNum,int reint,char* msg,char* msgError,int maximo,in
     @return return 0 OK, -1 Error.
 */
 
-int library_getEnteroSinLimites(int* pNum, int reint, char* msg, char* msgError)
+int ObtenerNumeroSinLimitacion(int* pNum, int reint, char* msg, char* msgError)
 {
     int auxiliarNum;
     int retorno = -1;
     for(;reint>0;reint--)
     {
         printf(msg);
-        if(getInt(&auxiliarNum) == 0)
+        if(obtenerEntero(&auxiliarNum) == 0)
         {
                 *pNum = auxiliarNum;
                 retorno = 0;
@@ -108,7 +108,7 @@ int library_getEnteroSinLimites(int* pNum, int reint, char* msg, char* msgError)
     @return return 0 OK, -1 Error.
 */
 
-int library_getNumeroDecimal(float *pNum, int reint, char* msg, char* msgError,float maximo,float minimo)
+int obtenerNumeroConComa(float *pNum, int reint, char* msg, char* msgError,float maximo,float minimo)
 {
     float buffer;
     int retorno = -1;
@@ -119,7 +119,7 @@ int library_getNumeroDecimal(float *pNum, int reint, char* msg, char* msgError,f
         {
             reint--;
             printf("%s",msg);
-            if(getFloat(&buffer) == 0 && buffer <= maximo && buffer >= minimo)
+            if(obtenfloat(&buffer) == 0 && buffer <= maximo && buffer >= minimo)
             {
                 *pNum = buffer;
                 retorno = 0;
@@ -141,7 +141,7 @@ int library_getNumeroDecimal(float *pNum, int reint, char* msg, char* msgError,f
     @return : 0 OK, -1 Error.
 */
 
-static int getString(char* pBufferString,int limite)
+static int obtenerChar(char* pBufferString,int limite)
 {
     fflush(stdin);
     fgets(pBufferString,limite,stdin);
@@ -158,13 +158,13 @@ static int getString(char* pBufferString,int limite)
     @return : 0 OK, -1 Error
 */
 
-static int getInt(int* pResultado)
+static int obtenerEntero(int* pResultado)
 {
     int retorno=-1;
     char bufferString[4096];
     if(pResultado != NULL)
     {
-        if(getString(bufferString,4096) == 0 && isInt(bufferString)==0)
+        if(obtenerChar(bufferString,4096) == 0 && esEntero(bufferString)==0)
         {
             *pResultado=atof(bufferString);
             retorno=0;
@@ -179,13 +179,13 @@ static int getInt(int* pResultado)
     @return : 0 OK, -1 Error
 */
 
-static int getFloat(float* pResultado)
+static int obtenfloat(float* pResultado)
 {
     int retorno=-1;
     char bufferString[4096];
     if(pResultado != NULL)
     {
-        if(getString(bufferString,4096) == 0 && isFloat(bufferString)==0)
+        if(obtenerChar(bufferString,4096) == 0 && esFlotante(bufferString)==0)
         {
             *pResultado=atof(bufferString);
             retorno=0;
@@ -200,7 +200,7 @@ static int getFloat(float* pResultado)
     @return : 0 OK, -1 Error.
 */
 
-static int isFloat(char* pBuffer)
+static int esFlotante(char* pBuffer)
 {
     int i=0;
     int retorno=0;
@@ -233,7 +233,7 @@ static int isFloat(char* pBuffer)
     @return : 0 OK, -1 Error.
 */
 
-int isInt(char* pBuffer)
+int esEntero(char* pBuffer)
 {
     int i=0;
     int retorno=0;
@@ -255,7 +255,7 @@ int isInt(char* pBuffer)
     @return : 0 OK, -1 Error.
 */
 
-int isIntConGuiones(char* pBuffer)
+int EnteroConGuiones(char* pBuffer)
 {
     int i = 0;
     int retorno = 0;
@@ -284,7 +284,7 @@ int isIntConGuiones(char* pBuffer)
     @return : 0 OK, -1 Error.
 */
 
-int isLetra(char* pBuffer)
+int esLetra(char* pBuffer)
 {
     int i = 0;
     int retorno = 0;
@@ -310,3 +310,5 @@ int isLetra(char* pBuffer)
     }
     return retorno;
 }
+
+

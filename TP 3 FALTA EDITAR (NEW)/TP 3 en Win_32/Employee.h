@@ -3,26 +3,26 @@
 typedef struct
 {
     int id;
-    char nombre[128];
-    int horasTrabajadas;
-    int sueldo;
+    char Name[128];
+    int HoursWorked;
+    int Salary;
 }Employee;
 
 Employee* employee_new();
-Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr, char* sueldoStr);
+Employee* employee_newParametros(char* idStr,char* NameStr,char* HoursWorkedStr, char* SalaryStr);
 int employee_delete();
 
 int employee_setId(Employee* this,char* id);
 int employee_getId(Employee* this,int* id);
 
-int employee_setNombre(Employee* this,char* nombre);
-int employee_getNombre(Employee* this,char* nombre);
+int employee_setName(Employee* this,char* Name);
+int employee_getName(Employee* this,char* Name);
 
-int employee_setHorasTrabajadas(Employee* this,char* horasTrabajadas);
-int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+int employee_setHoursWorked(Employee* this,char* HoursWorked);
+int employee_getHoursWorked(Employee* this,int* HoursWorked);
 
-int employee_setSueldo(Employee* this,char* sueldo);
-int employee_getSueldo(Employee* this,int* sueldo);
+int employee_setSalary(Employee* this,char* Salary);
+int employee_getSalary(Employee* this,int* Salary);
 
 int employee_cargarEmployee(LinkedList* pArrayEmployee);
 int employee_modificarEmployee(LinkedList* pArrayEmployee);

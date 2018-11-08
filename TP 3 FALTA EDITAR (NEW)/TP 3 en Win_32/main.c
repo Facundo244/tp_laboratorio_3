@@ -11,28 +11,18 @@ int main()
     LinkedList* listaEmpleados = ll_newLinkedList();
     do{
 
-    printf("\n                                  MENU:                                       ");
-    printf("\n 1. Cargar los datos de los empleados desde el archivo data.csv (modo texto)  ");
-    printf("\n                                                                              ");
-    printf("\n 2. Cargar los datos de los empleados desde el archivo data.csv (modo binario)");
-    printf("\n                                                                              ");
-    printf("\n 3. Alta de empleado                                                          ");
-    printf("\n                                                                              ");
-    printf("\n 4. Modificar datos de empleado                                               ");
-    printf("\n                                                                              ");
-    printf("\n 5. Baja de empleado                                                          ");
-    printf("\n                                                                              ");
-    printf("\n 6. Listar empleados                                                          ");
-    printf("\n                                                                              ");
-    printf("\n 7. Ordenar empleados                                                         ");
-    printf("\n                                                                              ");
-    printf("\n 8. Guardar los datos de los empleados en el archivo data.csv (modo texto)    ");
-    printf("\n                                                                              ");
-    printf("\n 9. Guardar los datos de los empleados en el archivo data.csv (modo binario)  ");
-    printf("\n                                                                              ");
-    printf("\n 10. Salir                                                                    ");
-
-    printf("\n          Ingrese una opcion (1/10): ");
+    printf("\n||                                 MENU:                                        ||");
+    printf("\n|| 1. Cargar los datos de los empleados desde el archivo data.csv (modo texto)  ||");
+    printf("\n|| 2. Cargar los datos de los empleados desde el archivo data.csv (modo binario)||");
+    printf("\n|| 3. Alta de empleado                                                          ||");
+    printf("\n|| 4. Modificar datos de empleado                                               ||");
+    printf("\n|| 5. Baja de empleado                                                          ||");
+    printf("\n|| 6. Listar empleados                                                          ||");
+    printf("\n|| 7. Ordenar empleados                                                         ||");
+    printf("\n|| 8. Guardar los datos de los empleados en el archivo data.csv (modo texto)    ||");
+    printf("\n|| 9. Guardar los datos de los empleados en el archivo data.csv (modo binario)  ||");
+    printf("\n||  10. Salir                                                                   ||");
+    printf("\n  Ingrese una opcion (1/10): ");
     scanf("%d" , & opcion);
 
     switch(opcion)
@@ -63,7 +53,7 @@ int main()
             break;
         case 7:
             system("cls");
-            controller_sortEmployee(listaEmpleados);
+            //controller_sortEmployee(listaEmpleados);
             break;
         case 8:
             system("cls");

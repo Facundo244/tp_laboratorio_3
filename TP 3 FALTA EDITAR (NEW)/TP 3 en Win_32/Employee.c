@@ -5,9 +5,9 @@
 #include "BibliotecaFunciones.h"
 #include <string.h>
 
-static int isValidNombre(char* name);
-static int isValidHorasTrabajadas(char* horasTrabajadas);
-static int isValidSueldo(char* sueldo);
+static int isValidName(char* name);
+static int isValidHoursWorked(char* HoursWorked);
+static int isValidSalary(char* Salary);
 static int isValidId(char* id);
 
 
@@ -18,11 +18,11 @@ Employee* employee_new(void)
 
 
 
-Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr, char* sueldoStr)
+Employee* employee_newParametros(char* idStr,char* NameStr,char* HoursWorkedStr, char* SalaryStr)
 {
     Employee* this = NULL;
     this = employee_new();
-    if(this == NULL || employee_setId(this, idStr) || employee_setNombre(this, nombreStr) || employee_setHorasTrabajadas(this, horasTrabajadasStr) ||employee_setSueldo(this, sueldoStr))
+    if(this == NULL || employee_setId(this, idStr) || employee_setName(this, NameStr) || employee_setHoursWorked(this, HoursWorkedStr) ||employee_setSalary(this, SalaryStr))
     {
         employee_delete(this);
         this = NULL;
@@ -44,12 +44,12 @@ int employee_delete(Employee* this)
 
 
 
-int employee_setNombre(Employee* this, char* nombre)
+int employee_setName(Employee* this, char* Name)
 {
     int retorno = -1;
-    if(this != NULL && isValidNombre(nombre) == 0)
+    if(this != NULL && isValidName(Name) == 0)
     {
-        strcpy(this->nombre,nombre);
+        strcpy(this->Name,Name);
         retorno = 0;
     }
     return retorno;
@@ -57,12 +57,12 @@ int employee_setNombre(Employee* this, char* nombre)
 
 
 
-int employee_getNombre(Employee* this, char* nombre)
+int employee_getName(Employee* this, char* Name)
 {
     int retorno = -1;
-    if(this != NULL && nombre != NULL)
+    if(this != NULL && Name != NULL)
     {
-        strcpy(nombre,this->nombre);
+        strcpy(Name,this->Name);
         retorno = 0;
     }
     return retorno;
@@ -70,13 +70,13 @@ int employee_getNombre(Employee* this, char* nombre)
 
 
 
-static int isValidNombre(char* nombre)
+static int isValidName(char* Name)
 {
     int retorno = -1;
-    if(isLetra(nombre) == -1)
+    if(esLetra(Name) == -1)
     {
-        printf("\nNombre invalido\n");
-        printf("\n%s\n", nombre);
+        printf("\nName invalido\n");
+        printf("\n%s\n", Name);
     }
     else
     {
@@ -87,12 +87,12 @@ static int isValidNombre(char* nombre)
 
 
 
-int employee_setHorasTrabajadas(Employee* this, char* horasTrabajadas)
+int employee_setHoursWorked(Employee* this, char* HoursWorked)
 {
     int retorno = -1;
-    if(this != NULL && isValidHorasTrabajadas(horasTrabajadas) == 0)
+    if(this != NULL && isValidHoursWorked(HoursWorked) == 0)
     {
-        this->horasTrabajadas = atoi(horasTrabajadas);
+        this->HoursWorked = atoi(HoursWorked);
         retorno = 0;
     }
     return retorno;
@@ -100,22 +100,22 @@ int employee_setHorasTrabajadas(Employee* this, char* horasTrabajadas)
 
 
 
-int employee_getHorasTrabajadas(Employee* this, int* horasTrabajadas)
+int employee_getHoursWorked(Employee* this, int* HoursWorked)
 {
     int retorno = -1;
-    if(this != NULL && horasTrabajadas != NULL)
+    if(this != NULL && HoursWorked != NULL)
     {
-        *horasTrabajadas = this->horasTrabajadas;
+        *HoursWorked = this->HoursWorked;
         retorno = 0;
     }
     return retorno;
 }
 
 
-static int isValidHorasTrabajadas(char* horasTrabajadas)
+static int isValidHoursWorked(char* HoursWorked)
 {
     int retorno = -1;
-    if(isInt(horasTrabajadas) == -1)
+    if(esEntero(HoursWorked) == -1)
     {
         printf("   ----------------------------------------------   \n");
         printf("           lAS HORAS TRABAJADAS NO SON VALIDAS       \n");
@@ -130,12 +130,12 @@ static int isValidHorasTrabajadas(char* horasTrabajadas)
 
 
 
-int employee_setSueldo(Employee* this, char* sueldo)
+int employee_setSalary(Employee* this, char* Salary)
 {
     int retorno = -1;
-    if(this != NULL && isValidSueldo(sueldo) == 0)
+    if(this != NULL && isValidSalary(Salary) == 0)
     {
-        this->sueldo = atoi(sueldo);
+        this->Salary = atoi(Salary);
         retorno = 0;
     }
     return retorno;
@@ -143,12 +143,12 @@ int employee_setSueldo(Employee* this, char* sueldo)
 
 
 
-int employee_getSueldo(Employee* this, int* sueldo)
+int employee_getSalary(Employee* this, int* Salary)
 {
     int retorno = -1;
-    if(this != NULL && sueldo != NULL)
+    if(this != NULL && Salary != NULL)
     {
-        *sueldo = this->sueldo;
+        *Salary = this->Salary;
         retorno = 0;
     }
     return retorno;
@@ -156,13 +156,13 @@ int employee_getSueldo(Employee* this, int* sueldo)
 
 
 
-static int isValidSueldo(char* sueldo)
+static int isValidSalary(char* Salary)
 {
     int retorno = -1;
-    if(isInt(sueldo) == -1)
+    if(esEntero(Salary) == -1)
     {
         printf("   ----------------------------------------------   \n");
-        printf("            EL SUELDO NO ES VALIDO                  \n");
+        printf("            EL Salary NO ES VALIDO                  \n");
         printf("   ----------------------------------------------    \n");
     }
     else
@@ -213,7 +213,7 @@ int employee_getId(Employee* this, int* id)
 static int isValidId(char* id)
 {
     int retorno = -1;
-    if(isIntConGuiones(id) == -1)
+    if(EnteroConGuiones(id) == -1)
     {
         printf("   ----------------------------------------------   \n");
         printf("             EL ID ES INVALIDO                       \n");
@@ -232,9 +232,9 @@ void employee_mostrarEmployee(LinkedList* pArrayListEmployee)
 {
     int i;
     int auxId;
-    char auxNombre[1024];
-    int auxHorasTrabajadas;
-    int auxSueldo;
+    char auxName[1024];
+    int auxHoursWorked;
+    int auxSalary;
     int size;
     size = ll_len(pArrayListEmployee);
     Employee* auxEmployee;
@@ -244,22 +244,26 @@ void employee_mostrarEmployee(LinkedList* pArrayListEmployee)
         for(i=0; i < size; i++)
         {
             auxEmployee = ll_get(pArrayListEmployee, i);
-            if( employee_getId(auxEmployee, &auxId) == 0 && employee_getNombre(auxEmployee, auxNombre) == 0 && employee_getHorasTrabajadas(auxEmployee, &auxHorasTrabajadas) == 0 &&
-                employee_getSueldo(auxEmployee, &auxSueldo) == 0)
+            if( employee_getId(auxEmployee, &auxId) == 0 && employee_getName(auxEmployee, auxName) == 0 && employee_getHoursWorked(auxEmployee, &auxHoursWorked) == 0 &&
+                employee_getSalary(auxEmployee, &auxSalary) == 0)
             {
-                printf("ID: %d **** Nombre: %s **** Horas Trabajadas: %d **** Sueldo: %d \n", auxId, auxNombre, auxHorasTrabajadas, auxSueldo);
+                printf("ID: %d **** Name: %s **** Horas Trabajadas: %d **** Salary: %d \n", auxId, auxName, auxHoursWorked, auxSalary);
             }
             else
             {
-                printf("\nNo se pudo mostrar la lista.\n");
+                printf("   ----------------------------------------------    \n");
+                printf("             NO SE PUDO MOSTRAR LA LISTA             \n");
+                printf("   ----------------------------------------------    \n");
             }
         }
-         printf("\nLa cantidad de empleados es: %d.", size);
+         printf("\n   ----------------------------------------------    \n");
+         printf("\n          LA CANTIDAD DE EMPLEADOS ES DE: %d         \n" , size);
+         printf("\n   ----------------------------------------------    \n");
     }
     else
     {
-        printf("   ----------------------------------------------   \n");
-        printf("             NO SE ENCUENTRA UNA LISTA                      \n");
+        printf("   ----------------------------------------------    \n");
+        printf("             NO SE ENCUENTRA UNA LISTA               \n");
         printf("   ----------------------------------------------    \n");
     }
 }
@@ -269,19 +273,20 @@ void employee_mostrarEmployee(LinkedList* pArrayListEmployee)
 int employee_cargarEmployee(LinkedList* pArrayEmployee)
 {
     int retorno = -1;
-    char auxNombre[1024];
+    char auxName[1024];
     char auxID[1024] = "-1";
-    int auxHorasTrabajadas;
-    int auxSueldo;
-    char bufferHorasTrabajadas[1024];
-    char bufferSueldo[1024];
+    int auxHoursWorked;
+    int auxSalary;
+    char bufferHoursWorked[1024];
+    char bufferSalary[1024];
     Employee* auxPunteroEmployee;
-    if( library_getNombre(auxNombre, "\nIngrese el nombre del empleado: \n","\nEl nombre ingresado es invalido\n") == 0 &&library_getEnteroSinLimites(&auxHorasTrabajadas, 10, "\nIngrese las horas trabajadas del empleado: \n","\nError, horas de trabajo invalidas\n") == 0 &&
-        library_getEnteroSinLimites(&auxSueldo, 10, "\nIngrese el sueldo del empleado: \n","\nError, sueldo invalido\n") == 0)
+
+    if( ObtenerName(auxName, "\nIngrese el Nombre del empleado: \n","\nEl Nombre ingresado es invalido\n") == 0 &&ObtenerNumeroSinLimitacion(&auxHoursWorked, 10, "\nIngrese las horas trabajadas del empleado: \n","\nError, horas de trabajo invalidas\n") == 0 &&
+        ObtenerNumeroSinLimitacion(&auxSalary, 10, "\nIngrese el Salario del empleado: \n","\nError, Salario invalido\n") == 0)
     {
-        itoa(auxHorasTrabajadas, bufferHorasTrabajadas, 10);
-        itoa(auxSueldo, bufferSueldo, 10);
-        auxPunteroEmployee = employee_newParametros(auxID, auxNombre, bufferHorasTrabajadas, bufferSueldo);
+        itoa(auxHoursWorked, bufferHoursWorked, 10);
+        itoa(auxSalary, bufferSalary, 10);
+        auxPunteroEmployee = employee_newParametros(auxID, auxName, bufferHoursWorked, bufferSalary);
         if(auxPunteroEmployee != NULL)
         {
             ll_add(pArrayEmployee, auxPunteroEmployee);
@@ -297,23 +302,22 @@ int employee_modificarEmployee(LinkedList* pArrayEmployee)
     int retorno = -1;
     int idEmployee;
     int indice;
-    char auxNombre[1024];
-    int auxHorasTrabajadas;
-    int auxSueldo;
+    char auxName[1024];
+    int auxHoursWorked;
+    int auxSalary;
     Employee* auxPEmployee;
-    if(pArrayEmployee != NULL && library_getEnteroSinLimites(&idEmployee, 10, "\nIngrese el ID del empleado a modificar: \n", "\nEl id ingresado es invalido\n") == 0)
+    if(pArrayEmployee != NULL && ObtenerNumeroSinLimitacion(&idEmployee, 10, "\nIngrese el ID del empleado a modificar: \n", "\nEl ID ingresado es invalido\n") == 0)
     {
         indice = employee_buscarPorId(pArrayEmployee, idEmployee);
         if(indice >= 0)
         {
             auxPEmployee = ll_get(pArrayEmployee, indice);
-            if( library_getNombre(auxNombre, "\nIngrese el nuevo nombre del empleado: \n","\nEl nombre ingresado es invalido\n")==0 &&
-                library_getEnteroSinLimites(&auxHorasTrabajadas, 10, "\nIngrese la nueva cantidad de horas trabajadas: \n", "\nLas horas de trabajo ingresadas son invalidas\n") == 0 &&
-                library_getEnteroSinLimites(&auxSueldo, 10,"\nIngrese el nuevo sueldo: \n", "\nEl sueldo ingresado es invalido\n") == 0)
+            if( ObtenerName(auxName, "\nIngrese el nuevo Name del empleado: \n","\nEl Name ingresado es invalido\n")==0 && ObtenerNumeroSinLimitacion(&auxHoursWorked, 10, "\nIngrese la nueva cantidad de horas trabajadas: \n", "\nLas horas de trabajo ingresadas son invalidas\n") == 0 &&
+                ObtenerNumeroSinLimitacion(&auxSalary, 10,"\nIngrese el nuevo Salary: \n", "\nEl Salary ingresado es invalido\n") == 0)
             {
-                auxPEmployee->horasTrabajadas = auxHorasTrabajadas;
-                auxPEmployee->sueldo = auxSueldo;
-                strcpy(auxPEmployee->nombre, auxNombre);
+                auxPEmployee->HoursWorked = auxHoursWorked;
+                auxPEmployee->Salary = auxSalary;
+                strcpy(auxPEmployee->Name, auxName);
                 retorno = 0;
             }
         }else
@@ -354,7 +358,7 @@ int employee_borrarEmployee(LinkedList* pArrayEmployee)
     int idEmployee;
     int id;
     Employee* auxPEmployee;
-    if(pArrayEmployee != NULL && library_getEnteroSinLimites(&idEmployee, 10, "\nIngrese el ID del empleado a borrar: \n", "\nEl Id ingresado es invalido\n") == 0)
+    if(pArrayEmployee != NULL && ObtenerNumeroSinLimitacion(&idEmployee, 10, "\nIngrese el ID del empleado a borrar: \n", "\nEl Id ingresado es invalido\n") == 0)
     {
         id = employee_buscarPorId(pArrayEmployee, idEmployee);
         if(id >= 0)
@@ -375,17 +379,20 @@ int employee_borrarEmployee(LinkedList* pArrayEmployee)
 
 
 
-int employee_ordenarPorNombre(void* thisA,void* thisB)
+int employee_ordenarPorName(void* thisA,void* thisB)
 {
     int retorno = 0;
-    char nombreA[1024];
-    char nombreB[1024];
-    employee_getNombre((Employee*)thisA,nombreA);
-    employee_getNombre((Employee*)thisB,nombreB);
-    if(strcmp(nombreA,nombreB) > 0)
+    char NameA[60];
+    char NameB[60];
+
+    employee_getName(thisA,NameA);
+    employee_getName(thisB,NameB);
+
+    if(strcmp(NameA,NameB) > 0)
     {
         retorno = 1;
-    }else if(strcmp(nombreA,nombreB) < 0)
+
+    }else if(strcmp(NameA,NameB) < 0)
     {
         retorno = -1;
     }
@@ -408,7 +415,7 @@ int employee_guardarDatosenTexto(LinkedList* pArrayEmployee, char* path)
         for(i = 0; i < size; i++)
         {
             auxPEmployee = ll_get(pArrayEmployee,i);
-            fprintf(pFile, "%d,%s,%d,%d\n", auxPEmployee->id, auxPEmployee->nombre, auxPEmployee->horasTrabajadas, auxPEmployee->sueldo);
+            fprintf(pFile, "%d,%s,%d,%d\n", auxPEmployee->id, auxPEmployee->Name, auxPEmployee->HoursWorked, auxPEmployee->Salary);
         }
     }
     fclose(pFile);
