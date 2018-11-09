@@ -1,0 +1,341 @@
+# depslib dependency file v1.0
+1533062952 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/Employee.c
+
+1533063050 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1532354323 /home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/LinkedList.h
+
+1533062926 /home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/Employee.h
+
+1533063080 source:/home/mauro/Descargas/Practica_Pair_v1.2/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533062952 source:/home/mauro/Descargas/TP3/Linux_64/Employee.c
+
+1533066103 source:/home/mauro/Descargas/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1532354323 /home/mauro/Descargas/TP3/Linux_64/LinkedList.h
+
+1533066103 /home/mauro/Descargas/TP3/Linux_64/Employee.h
+
+1533063080 source:/home/mauro/Descargas/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533145792 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533118898 /home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/LinkedList.h
+
+1533118898 /home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Employee.h
+
+1533118898 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/Employee.c
+
+1533145890 source:/home/mauro/Descargas/TP3-20180801T173619Z-001/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541421591 source:c:\users\alumno\downloads\tp3\win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"Library.h"
+
+1533133022 c:\users\alumno\downloads\tp3\win_32\linkedlist.h
+
+1541422045 c:\users\alumno\downloads\tp3\win_32\employee.h
+
+1533133022 c:\users\alumno\downloads\tp3\win_32\parser.h
+
+1541421318 c:\users\alumno\downloads\tp3\win_32\library.h
+
+1541423333 source:c:\users\alumno\downloads\tp3\win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"Library.h"
+	<string.h>
+
+1541427546 source:c:\users\alumno\downloads\tp3\win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"Library.h"
+
+1533133022 c:\users\alumno\downloads\tp3\win_32\controller.h
+
+1541424352 source:c:\users\alumno\downloads\tp3\win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541422182 source:c:\users\alumno\downloads\tp3\win_32\library.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Library.h"
+	<ctype.h>
+
+1541449918 source:c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"Library.h"
+
+1541449918 c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\linkedlist.h
+
+1541449918 c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\employee.h
+
+1541449918 c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\parser.h
+
+1541449918 c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\library.h
+
+1541449918 source:c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"Library.h"
+	<string.h>
+
+1541449918 source:c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\library.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Library.h"
+	<ctype.h>
+
+1541449918 source:c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"Library.h"
+
+1541449918 c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\controller.h
+
+1541449918 source:c:\users\facundo\desktop\trabajos-practicos\trabajo-practico-3\win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541454878 source:c:\users\facundo\desktop\trabajo-practico-3\win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"Library.h"
+
+1541449918 c:\users\facundo\desktop\trabajo-practico-3\win_32\linkedlist.h
+
+1541449918 c:\users\facundo\desktop\trabajo-practico-3\win_32\employee.h
+
+1541449918 c:\users\facundo\desktop\trabajo-practico-3\win_32\parser.h
+
+1541449918 c:\users\facundo\desktop\trabajo-practico-3\win_32\library.h
+
+1541454237 source:c:\users\facundo\desktop\trabajo-practico-3\win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"Library.h"
+	<string.h>
+
+1541449918 source:c:\users\facundo\desktop\trabajo-practico-3\win_32\library.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Library.h"
+	<ctype.h>
+
+1541454955 source:c:\users\facundo\desktop\trabajo-practico-3\win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541454577 source:c:\users\facundo\desktop\trabajo-practico-3\win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"Library.h"
+
+1541449918 c:\users\facundo\desktop\trabajo-practico-3\win_32\controller.h
+
+1541458363 source:c:\users\facundo\desktop\tp 3\win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"Library.h"
+
+1541449918 c:\users\facundo\desktop\tp 3\win_32\linkedlist.h
+
+1541458390 c:\users\facundo\desktop\tp 3\win_32\employee.h
+
+1541449918 c:\users\facundo\desktop\tp 3\win_32\parser.h
+
+1541449918 c:\users\facundo\desktop\tp 3\win_32\library.h
+
+1541458396 source:c:\users\facundo\desktop\tp 3\win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"Library.h"
+	<string.h>
+
+1541458503 source:c:\users\facundo\desktop\tp 3\win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"BibliotecaFunciones.h"
+
+1541449918 c:\users\facundo\desktop\tp 3\win_32\controller.h
+
+1541456901 source:c:\users\facundo\desktop\tp 3\win_32\bibliotecafunciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"BibliotecaFunciones.h"
+	<ctype.h>
+
+1541456901 c:\users\facundo\desktop\tp 3\win_32\bibliotecafunciones.h
+
+1541454985 source:c:\users\facundo\desktop\tp 3\win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541505378 source:c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\bibliotecafunciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"BibliotecaFunciones.h"
+	<ctype.h>
+
+1541505378 c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\bibliotecafunciones.h
+
+1541505378 source:c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"Library.h"
+
+1541505725 c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\linkedlist.h
+
+1541505378 c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\employee.h
+
+1541505378 c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\parser.h
+
+1541505378 c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\library.h
+
+1541505882 source:c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"BibliotecaFunciones.h"
+	<string.h>
+
+1541505882 source:c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"BibliotecaFunciones.h"
+
+1541505378 c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\controller.h
+
+1541505378 source:c:\users\alumno\desktop\tp_laboratorio_3\tp 3\tp 3 en win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541698436 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\bibliotecafunciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"BibliotecaFunciones.h"
+	<ctype.h>
+
+1541613016 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\bibliotecafunciones.h
+
+1541700867 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"BibliotecaFunciones.h"
+
+1541544158 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\linkedlist.h
+
+1541612908 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\employee.h
+
+1541544158 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\parser.h
+
+1541699538 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"BibliotecaFunciones.h"
+	<string.h>
+
+1541700875 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"BibliotecaFunciones.h"
+
+1541698212 c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\controller.h
+
+1541610161 source:c:\users\facundo\desktop\tp_laboratorio_3\tp 3 falta editar (new)\tp 3 en win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
